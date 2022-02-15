@@ -92,7 +92,7 @@ if x["cod"] != "404":
                 else:
                     weather_pic = weather_pic_dict.get(i[1])
 
-file_loc = "file location"
+file_loc = "location of weather ini file"
 my_file = open(file_loc, "r")
 lines = my_file.readlines()
 
