@@ -92,13 +92,14 @@ if x["cod"] != "404":
                 else:
                     weather_pic = weather_pic_dict.get(i[1])
 
-my_file = open("C:\\Users\\Islam\\Documents\\Rainmeter\\Skins\\SysDash-1.1.0\\Weather\\weather.ini", "r")
+file_loc = "file location"
+my_file = open(file_loc, "r")
 lines = my_file.readlines()
 
 lines[27] = f'Substitute="":"{weather_pic}"\n'
 lines[33] = f'Substitute="":"{temp}"\n'
 lines[39] = f'Substitute="":"{city_name}"\n'
 
-my_file = open("C:\\Users\\Islam\\Documents\\Rainmeter\\Skins\\SysDash-1.1.0\\Weather\\weather.ini", "w")
+my_file = open(file_loc, "w")
 my_file.writelines(lines)
 my_file.close()
